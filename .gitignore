@@ -1,0 +1,14 @@
+# Archivos de usuario y caché de Visual Studio
+.vs/
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.cache
+
+# Carpetas de compilación (no se suben)
+bin/
+obj/
+
+# Archivos temporales de SSIS
+*.tmp
