@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{123D7BDF-DB6A-489F-8C22-87FC71F1831F}">
+  DTS:VersionBuild="101"
+  DTS:VersionGUID="{63C034E0-BC1F-479D-93A8-C99F8BED8C24}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3149,100 +3149,6 @@ WHERE ShipMethodKey = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Hechos\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input].Columns[DueDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DueDate"
-                      lineageId="Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[DueDate]" />
-                    <inputColumn
-                      refId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input].Columns[ShipDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="ShipDate"
-                      lineageId="Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[ShipDate]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Cargar Hechos\Conditional Split.Outputs[VentasValidas]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="VentasValidas"
-                  synchronousInputId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[ShipDate]}) &amp;&amp; ![ISNULL](#{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[DueDate]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(ShipDate) &amp;&amp; !ISNULL(DueDate)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Hechos\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Cargar Hechos\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -3295,13 +3201,13 @@ WHERE ShipMethodKey = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(#{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[DueDate]} &gt;= #{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[ShipDate]}) ? 1 : 0</property>
+                          name="Expression">[ISNULL](#{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[ShipDate]}) ? -1 : (#{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[DueDate]} &gt;= #{Package\Cargar Hechos\Merge Join.Outputs[Merge Join Output].Columns[ShipDate]} ? 1 : 0)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DueDate &gt;= ShipDate) ? 1 : 0</property>
+                          name="FriendlyExpression">ISNULL(ShipDate) ? -1 : (DueDate &gt;= ShipDate ? 1 : 0)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5934,24 +5840,24 @@ where [refTable].[NumeroOrden] = ?</property>
               startId="Package\Cargar Hechos\Lookup Vendedor.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Cargar Hechos.Paths[Lookup Match Output1]"
-              endId="Package\Cargar Hechos\Conditional Split.Inputs[Conditional Split Input]"
-              name="Lookup Match Output"
-              startId="Package\Cargar Hechos\Lookup Cliente.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Cargar Hechos.Paths[Lookup Match Output2]"
               endId="Package\Cargar Hechos\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Cargar Hechos\Verificar Existencia.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Cargar Hechos.Paths[Lookup Match Output3]"
+              refId="Package\Cargar Hechos.Paths[Lookup Match Output2]"
               endId="Package\Cargar Hechos\Lookup Envio.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Cargar Hechos\Lookup Territorio.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Cargar Hechos.Paths[Lookup Match Output4]"
+              refId="Package\Cargar Hechos.Paths[Lookup Match Output3]"
               endId="Package\Cargar Hechos\Lookup Cliente.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Cargar Hechos\Lookup Envio.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Cargar Hechos.Paths[Lookup Match Output4]"
+              endId="Package\Cargar Hechos\Derived Column.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar Hechos\Lookup Cliente.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Cargar Hechos.Paths[Lookup No Match Output]"
               endId="Package\Cargar Hechos\OLE DB Destination.Inputs[OLE DB Destination Input]"
@@ -5992,11 +5898,6 @@ where [refTable].[NumeroOrden] = ?</property>
               endId="Package\Cargar Hechos\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Cargar Hechos\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Cargar Hechos.Paths[VentasValidas]"
-              endId="Package\Cargar Hechos\Derived Column.Inputs[Derived Column Input]"
-              name="VentasValidas"
-              startId="Package\Cargar Hechos\Conditional Split.Outputs[VentasValidas]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9159,7 +9060,7 @@ INNER JOIN Person.Person p
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-101.810434337798,20.7816196542312,96.3827734375,11.609375"
+              BoundingBox="-101.810434337798,20.7816196542311,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9454,7 +9355,7 @@ INNER JOIN Person.Person p
         <NodeLayout
           Size="173,42"
           Id="Package\Cargar Hechos\Verificar Existencia"
-          TopLeft="374.545454545454,898.181818181818" />
+          TopLeft="374.545454545454,833.181818181818" />
         <NodeLayout
           Size="183,42"
           Id="Package\Cargar Hechos\Source Stage Cliente"
@@ -9466,11 +9367,7 @@ INNER JOIN Person.Person p
         <NodeLayout
           Size="173,42"
           Id="Package\Cargar Hechos\OLE DB Command"
-          TopLeft="178.181818181818,976.363636363636" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Cargar Hechos\Conditional Split"
-          TopLeft="382,745" />
+          TopLeft="178.181818181818,911.363636363636" />
         <NodeLayout
           Size="132,42"
           Id="Package\Cargar Hechos\Multicast 1"
@@ -9490,7 +9387,7 @@ INNER JOIN Person.Person p
         <NodeLayout
           Size="177,42"
           Id="Package\Cargar Hechos\OLE DB Destination"
-          TopLeft="605.363636363636,980.272727272727" />
+          TopLeft="605.363636363636,915.272727272727" />
         <NodeLayout
           Size="167,42"
           Id="Package\Cargar Hechos\Derived Column 2"
@@ -9522,7 +9419,7 @@ INNER JOIN Person.Person p
         <NodeLayout
           Size="158,42"
           Id="Package\Cargar Hechos\Derived Column"
-          TopLeft="385,825" />
+          TopLeft="383,744" />
         <EdgeLayout
           Id="Package\Cargar Hechos.Paths[OLE DB Source Output]"
           TopLeft="359.25,94">
@@ -9637,7 +9534,7 @@ INNER JOIN Person.Person p
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Cargar Hechos.Paths[Lookup No Match Output]"
-          TopLeft="488.545454545454,940.181818181818">
+          TopLeft="488.545454545454,875.181818181818">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9667,12 +9564,12 @@ INNER JOIN Person.Person p
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="46.8527041903409,21.2567947516401,111.6127734375,11.609375"
+              BoundingBox="46.852704190341,21.2567947516401,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Lookup Match Output4]"
+          Id="Package\Cargar Hechos.Paths[Lookup Match Output3]"
           TopLeft="461,618">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9696,7 +9593,7 @@ INNER JOIN Person.Person p
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Lookup Match Output3]"
+          Id="Package\Cargar Hechos.Paths[Lookup Match Output2]"
           TopLeft="460,538">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9720,8 +9617,8 @@ INNER JOIN Person.Person p
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Lookup Match Output2]"
-          TopLeft="433.545454545454,940.181818181818">
+          Id="Package\Cargar Hechos.Paths[Lookup Match Output1]"
+          TopLeft="433.545454545454,875.181818181818">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9752,30 +9649,6 @@ INNER JOIN Person.Person p
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-132.623204900568,19.6716651046548,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Lookup Match Output1]"
-          TopLeft="461.25,700">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9827,18 +9700,18 @@ INNER JOIN Person.Person p
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Cargar Hechos.Paths[Derived Column Output]"
-          TopLeft="462.522727272727,867">
+          TopLeft="461.522727272727,786">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.1818181818182"
+              EndConnector="0,47.181818181818"
               Start="0,0"
-              End="0,23.6818181818182">
+              End="0,39.681818181818">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.6818181818182" />
+                    End="0,39.681818181818" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9867,30 +9740,6 @@ INNER JOIN Person.Person p
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[VentasValidas]"
-          TopLeft="462.75,787">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-31.37576171875,10.37548828125,62.7515234375,9.7490234375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9981,6 +9830,30 @@ INNER JOIN Person.Person p
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Hechos.Paths[Lookup Match Output4]"
+          TopLeft="461.5,700">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
