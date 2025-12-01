@@ -1,86 +1,86 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/21/2025 8:17:14 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-4OQ81IB"
   DTS:CreatorName="DESKTOP-4OQ81IB\Cevin"
-  DTS:DTSID="{3BDF0F32-746C-4233-B1BC-47650ECFF3B2}"
+  DTS:DTSID="{2BB4FE74-AF60-4245-97AD-C4B4DBEEA99C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1008.3"
   DTS:LocaleID="13322"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="102"
-  DTS:VersionGUID="{8D2F648E-3C9F-4F68-AB8A-5C4870677C0E}">
+  DTS:VersionBuild="101"
+  DTS:VersionGUID="{1C0A58B5-D9C7-4B27-A824-86B1C311332D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[.\MSSQL2022.AdventureWorks2022]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{9DF42F74-17C6-41E8-905D-A89A11E7BE39}"
+      DTS:DTSID="{6244AD4D-5E28-483F-BA42-DA655D577F1C}"
       DTS:ObjectName=".\MSSQL2022.AdventureWorks2022">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{9DF42F74-17C6-41E8-905D-A89A11E7BE39}.\MSSQL2022.AdventureWorks2022;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{6244AD4D-5E28-483F-BA42-DA655D577F1C}.\MSSQL2022.AdventureWorks2022;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[.\MSSQL2022.AdventureWorks2022 1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{84D58D65-0F9A-4050-A893-08C8DF20083E}"
+      DTS:DTSID="{CC3A6638-A910-49C7-B214-B223FD5DAE7D}"
       DTS:ObjectName=".\MSSQL2022.AdventureWorks2022 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{84D58D65-0F9A-4050-A893-08C8DF20083E}.\MSSQL2022.AdventureWorks2022 1;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{CC3A6638-A910-49C7-B214-B223FD5DAE7D}.\MSSQL2022.AdventureWorks2022 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[.\MSSQL2022.DW_AdventureWorks]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{94C816FB-265F-4D01-86C8-B4F7E4AF86AA}"
+      DTS:DTSID="{C81881CF-EFEB-4D5E-9C4E-674619821C6C}"
       DTS:ObjectName=".\MSSQL2022.DW_AdventureWorks">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=DW_AdventureWorks;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{94C816FB-265F-4D01-86C8-B4F7E4AF86AA}.\MSSQL2022.DW_AdventureWorks;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=DW_AdventureWorks;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C81881CF-EFEB-4D5E-9C4E-674619821C6C}.\MSSQL2022.DW_AdventureWorks;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[.\MSSQL2022.StageDB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{57C67E52-60D1-4495-90D1-31F22596C545}"
+      DTS:DTSID="{7CB87E56-ACF8-454C-8E70-869F6EB0401C}"
       DTS:ObjectName=".\MSSQL2022.StageDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=StageDB;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{57C67E52-60D1-4495-90D1-31F22596C545}.\MSSQL2022.StageDB;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.\MSSQL2022;Initial Catalog=StageDB;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{7CB87E56-ACF8-454C-8E70-869F6EB0401C}.\MSSQL2022.StageDB;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-4OQ81IB\MSSQL2022.AdventureWorks2022]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{87146E0C-08F3-47EC-B0C2-6591D091922E}"
+      DTS:DTSID="{44705BFA-AB77-4C22-B111-9730E29561E3}"
       DTS:ObjectName="DESKTOP-4OQ81IB\MSSQL2022.AdventureWorks2022">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-4OQ81IB\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{87146E0C-08F3-47EC-B0C2-6591D091922E}DESKTOP-4OQ81IB\MSSQL2022.AdventureWorks2022;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-4OQ81IB\MSSQL2022;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{44705BFA-AB77-4C22-B111-9730E29561E3}DESKTOP-4OQ81IB\MSSQL2022.AdventureWorks2022;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D754FA0F-36A6-488E-90E6-777DCFBAAD62}"
+      DTS:DTSID="{A079E080-66E5-4B5C-AC6B-64BDC5BA5CAF}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -91,15 +91,15 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Descargas\VentasTerritorio.csv">
+          DTS:ConnectionString="C:\Users\Domi\Downloads\UNIVERSIDAD\AÑO 5\SEMESTRE 10\GESTION INFORMATICA II\U2\Nueva carpeta\VentasTerritorio.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="TerritoryID"
-              DTS:DTSID="{F7E7EFE0-1FF4-460D-97D7-DB600D87191A}"
+              DTS:DTSID="{0C6E7388-E030-47F7-A181-1C326F4BCCA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +107,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="VentaTotalRegion"
-              DTS:DTSID="{B791F173-4FA0-46BB-AAD5-CA7487D92C68}"
+              DTS:DTSID="{8F72F911-4883-4261-8700-C324A642E0EB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -116,7 +116,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{9B6D935D-D74A-420C-8602-1C9A21626C4B}"
+      DTS:DTSID="{F63FA56A-7A3B-4B55-B167-D472B129C4D4}"
       DTS:ObjectName="Flat File Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -135,7 +135,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="OrderDate"
-              DTS:DTSID="{DD9A89BE-F269-4C74-A381-F6C3CE204C42}"
+              DTS:DTSID="{8061AE45-C3F6-4546-8910-B6F2CB71514B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -143,7 +143,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DueDate"
-              DTS:DTSID="{E607CD59-7341-471E-AF08-D723AC71069E}"
+              DTS:DTSID="{C7CF9719-707F-401D-A254-C429860F2408}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -151,7 +151,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="ShipDate"
-              DTS:DTSID="{96167A26-F1A1-4A2F-BD93-9CDCCE6534FF}"
+              DTS:DTSID="{DD5DCED0-623B-4B45-8AB5-B713824BF8DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="CustomerID"
-              DTS:DTSID="{1E0878B1-53D3-4FB9-9EB5-1BED1A421E64}"
+              DTS:DTSID="{96EE8C41-B59C-44C7-83B6-10ABD542DFC0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +167,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="TerritoryID"
-              DTS:DTSID="{39B04241-F9CB-42B0-8083-D777615C1200}"
+              DTS:DTSID="{F6BD00A7-AF48-4C0D-96EE-767CC6318373}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -175,7 +175,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ShipMethodID"
-              DTS:DTSID="{5EC43811-9A8A-478C-BA2E-6F0B4E7A8E5B}"
+              DTS:DTSID="{47CCC342-79D4-4707-8D53-7AA47C79A37D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="Freight"
-              DTS:DTSID="{1CEE4E3E-1BEE-4CDE-99AF-124C17B2E797}"
+              DTS:DTSID="{F9255A62-8397-4C2B-9DA8-ABCED8EB6367}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SalesPersonKey"
-              DTS:DTSID="{7B5A8E90-96F9-4DF6-A04F-69882C9BF931}"
+              DTS:DTSID="{2CBB044A-FDAC-426A-B266-0A5ADF79D3DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +199,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="SubTotal"
-              DTS:DTSID="{E37DEA5C-7041-4A2D-B254-0F131BE1496C}"
+              DTS:DTSID="{FDAC7AB6-40CE-4932-A8C6-DCC78B06E938}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -207,7 +207,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{C9BBEAC6-DE6C-4CD9-8D35-98A21683ED42}"
+              DTS:DTSID="{9D3768E2-7A28-48A3-9E92-2C5145430525}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -215,7 +215,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{87321C71-229E-4ADC-B414-68B23A11F8D3}"
+              DTS:DTSID="{B871D3F4-2354-4736-A523-45A34DF73BC8}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -228,7 +228,7 @@
       DTS:refId="Package\Cargar Dimensiones"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{a6dffce9-a2b0-4f40-9115-c5e16796849e}"
+      DTS:DTSID="{2369CB7D-5C60-48A6-8770-18E806696B94}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Cargar Dimensiones"
@@ -3015,7 +3015,7 @@ WHERE ShipMethodKey = ?</property>
       DTS:refId="Package\Cargar Hechos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{ab96a3fc-f623-4399-8d8e-eb275d07afd8}"
+      DTS:DTSID="{B2436869-1537-436D-8607-C8E52DD1E258}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Cargar Hechos"
@@ -3775,7 +3775,7 @@ where [refTable].[TerritoryAlternateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Cargar Hechos\471:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar Hechos\486:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5906,7 +5906,7 @@ where [refTable].[NumeroOrden] = ?</property>
       DTS:refId="Package\Cargar Stage"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{01208c0a-08cc-4e5c-8adb-9ff0c8833b42}"
+      DTS:DTSID="{6445A059-9B10-4EC7-ABC8-A7067073F1F3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Cargar Stage"
@@ -8503,7 +8503,7 @@ INNER JOIN Person.Person p
       DTS:refId="Package\Limpiar Stage"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{0614f4ba-211f-46c0-b39a-6c71c73a4b05}"
+      DTS:DTSID="{9F159B4C-60BB-4B90-8AC1-C387DF85F7CA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Limpiar Stage"
@@ -8511,7 +8511,7 @@ INNER JOIN Person.Person p
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{57C67E52-60D1-4495-90D1-31F22596C545}"
+          SQLTask:Connection="{7CB87E56-ACF8-454C-8E70-869F6EB0401C}"
           SQLTask:SqlStatementSource="&#xA;TRUNCATE TABLE StageDB.dbo.[Stage Vendedor];&#xA;TRUNCATE TABLE StageDB.dbo.[Stage Cliente];&#xA;TRUNCATE TABLE StageDB.dbo.[Stage Territorio];&#xA;TRUNCATE TABLE StageDB.dbo.[Stage SalesOrderHeader];&#xA;TRUNCATE TABLE StageDB.dbo.[Stage ShipMethod];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -8520,7 +8520,7 @@ INNER JOIN Person.Person p
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
       DTS:CreationName=""
-      DTS:DTSID="{0574D6B2-411C-4809-B0C4-723A0DE62E90}"
+      DTS:DTSID="{F16472CF-478D-4E9A-BBE3-E9B403AB89B3}"
       DTS:From="Package\Limpiar Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 6"
@@ -8528,7 +8528,7 @@ INNER JOIN Person.Person p
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 7]"
       DTS:CreationName=""
-      DTS:DTSID="{DF5E913A-1644-43EB-A4E9-D7460EEB9816}"
+      DTS:DTSID="{B43A6630-C912-4920-8F6F-06294A59826C}"
       DTS:From="Package\Cargar Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 7"
@@ -8536,7 +8536,7 @@ INNER JOIN Person.Person p
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 8]"
       DTS:CreationName=""
-      DTS:DTSID="{78336909-3556-4ED4-8874-3A3BE69F81E8}"
+      DTS:DTSID="{15FA27FA-25EE-4881-9D85-A7BDAD009E31}"
       DTS:From="Package\Cargar Dimensiones"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 8"
@@ -8743,9 +8743,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8767,9 +8765,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8791,9 +8787,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8815,9 +8809,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9127,9 +9119,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9163,9 +9153,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9187,9 +9175,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9211,9 +9197,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9369,49 +9353,29 @@ INNER JOIN Person.Person p
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="162,42"
-          Id="Package\Cargar Hechos\Lookup Territorio"
-          TopLeft="378,496" />
-        <NodeLayout
           Size="173,42"
-          Id="Package\Cargar Hechos\OLE DB Command"
-          TopLeft="178.181818181818,911.363636363636" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Cargar Hechos\Lookup Cliente"
-          TopLeft="385,658" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Cargar Hechos\Derived Column"
-          TopLeft="383,744" />
+          Id="Package\Cargar Hechos\Verificar Existencia"
+          TopLeft="374.545454545454,833.181818181818" />
         <NodeLayout
           Size="183,42"
           Id="Package\Cargar Hechos\Source Stage Cliente"
           TopLeft="468,51" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\Cargar Hechos\Source Stage SOH"
-          TopLeft="274,52" />
-        <NodeLayout
           Size="166,42"
           Id="Package\Cargar Hechos\Lookup Vendedor"
           TopLeft="380.909090909091,382.727272727273" />
         <NodeLayout
-          Size="108,42"
-          Id="Package\Cargar Hechos\Sort 1"
-          TopLeft="512,137" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Cargar Hechos\Flat File Destination"
-          TopLeft="755.833333333333,340" />
-        <NodeLayout
-          Size="146,42"
-          Id="Package\Cargar Hechos\Lookup Envio"
-          TopLeft="388,576" />
+          Size="173,42"
+          Id="Package\Cargar Hechos\OLE DB Command"
+          TopLeft="178.181818181818,911.363636363636" />
         <NodeLayout
           Size="132,42"
           Id="Package\Cargar Hechos\Multicast 1"
           TopLeft="610,250.833333333333" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Cargar Hechos\Lookup Envio"
+          TopLeft="388,576" />
         <NodeLayout
           Size="133,42"
           Id="Package\Cargar Hechos\Merge Join"
@@ -9429,103 +9393,33 @@ INNER JOIN Person.Person p
           Id="Package\Cargar Hechos\Derived Column 2"
           TopLeft="377,304" />
         <NodeLayout
+          Size="172,42"
+          Id="Package\Cargar Hechos\Source Stage SOH"
+          TopLeft="274,52" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Cargar Hechos\Lookup Territorio"
+          TopLeft="378,496" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Cargar Hechos\Sort 1"
+          TopLeft="512,137" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Cargar Hechos\Flat File Destination"
+          TopLeft="755.833333333333,340" />
+        <NodeLayout
           Size="130,42"
           Id="Package\Cargar Hechos\Aggregate"
           TopLeft="777.5,255.833333333333" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Cargar Hechos\Verificar Existencia"
-          TopLeft="374.545454545454,833.181818181818" />
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Sort Output1]"
-          TopLeft="358.5,180">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="82.1666666666667,42"
-              Start="0,0"
-              End="82.1666666666667,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.9004457652303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.9004457652303"
-                    Point2="0,24.9004457652303"
-                    Point3="4,24.9004457652303" />
-                  <mssgle:LineSegment
-                    End="78.1666666666667,24.9004457652303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="78.1666666666667,24.9004457652303"
-                    Point2="82.1666666666667,24.9004457652303"
-                    Point3="82.1666666666667,28.9004457652303" />
-                  <mssgle:LineSegment
-                    End="82.1666666666667,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Sort Output]"
-          TopLeft="566,179">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-104.5,43"
-              Start="0,0"
-              End="-104.5,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
-                  <mssgle:LineSegment
-                    End="-100.5,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-100.5,21.5"
-                    Point2="-104.5,21.5"
-                    Point3="-104.5,25.5" />
-                  <mssgle:LineSegment
-                    End="-104.5,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[OLE DB Source Output1]"
-          TopLeft="562.75,93">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="152,42"
+          Id="Package\Cargar Hechos\Lookup Cliente"
+          TopLeft="385,658" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Cargar Hechos\Derived Column"
+          TopLeft="383,744" />
         <EdgeLayout
           Id="Package\Cargar Hechos.Paths[OLE DB Source Output]"
           TopLeft="359.25,94">
@@ -9671,30 +9565,6 @@ INNER JOIN Person.Person p
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="46.852704190341,21.2567947516401,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Hechos.Paths[Lookup Match Output4]"
-          TopLeft="461.5,700">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9872,11 +9742,125 @@ INNER JOIN Person.Person p
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Hechos.Paths[Sort Output1]"
+          TopLeft="358.5,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.1666666666667,42"
+              Start="0,0"
+              End="82.1666666666667,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9004457652303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9004457652303"
+                    Point2="0,24.9004457652303"
+                    Point3="4,24.9004457652303" />
+                  <mssgle:LineSegment
+                    End="78.1666666666667,24.9004457652303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="78.1666666666667,24.9004457652303"
+                    Point2="82.1666666666667,24.9004457652303"
+                    Point3="82.1666666666667,28.9004457652303" />
+                  <mssgle:LineSegment
+                    End="82.1666666666667,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Hechos.Paths[Sort Output]"
+          TopLeft="566,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.5,43"
+              Start="0,0"
+              End="-104.5,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="-4,21.5" />
+                  <mssgle:LineSegment
+                    End="-100.5,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-100.5,21.5"
+                    Point2="-104.5,21.5"
+                    Point3="-104.5,25.5" />
+                  <mssgle:LineSegment
+                    End="-104.5,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Hechos.Paths[OLE DB Source Output1]"
+          TopLeft="562.75,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Hechos.Paths[Lookup Match Output4]"
+          TopLeft="461.5,700">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar Hechos\Lookup Territorio">
+    design-time-name="Package\Cargar Hechos\Verificar Existencia">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -9886,30 +9870,7 @@ INNER JOIN Person.Person p
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimTerritorio]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Hechos\Lookup Cliente">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCliente]</Value>
+          type="q3:string">[dbo].[FactVentas_Unificada]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -9923,19 +9884,6 @@ INNER JOIN Person.Person p
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar Hechos\Source Stage Cliente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Hechos\Source Stage SOH">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10007,7 +9955,20 @@ INNER JOIN Person.Person p
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar Hechos\Verificar Existencia">
+    design-time-name="Package\Cargar Hechos\Source Stage SOH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Hechos\Lookup Territorio">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -10017,7 +9978,30 @@ INNER JOIN Person.Person p
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[FactVentas_Unificada]</Value>
+          type="q3:string">[dbo].[DimTerritorio]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Hechos\Lookup Cliente">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCliente]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -10033,7 +10017,7 @@ INNER JOIN Person.Person p
     design-time-name="Package\Cargar Stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="201,42"
           Id="Package\Cargar Stage\Origen SaleOrderHeader"
@@ -10093,9 +10077,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10117,9 +10099,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10141,9 +10121,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10165,9 +10143,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10189,9 +10165,7 @@ INNER JOIN Person.Person p
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
